@@ -1,0 +1,291 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-image: url('stock-vector-fx-forex-stock-market-trading-chart-vector-background-business-finance-abstract-backdrop-1382412128new.jpg');
+  background-size: 100%, 100%;
+  /* background-repeat: no-repeat; */
+}
+html body {
+  height: 100%;
+}
+.container-fluid {
+  height: 100%;
+  position: relative;
+ 
+}
+#search-input {
+  max-width: 40%;
+  margin-left: 55%;
+  word-wrap: break-word;
+  margin-top: 2%;
+}
+#navbar {
+  border-bottom: 0ch;
+}
+#img-top {
+  margin-left: 97%;
+}
+#content {
+  display: flex;
+}
+.card {
+  margin-right: 0ch;
+}
+
+#headLineRow {
+  width: 100%;
+}
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 47px;
+  height: 24px;
+  margin-left: 75%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  background-color: rgb(78, 78, 78);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.hidden {
+  display: none;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: 20px auto;
+  position: fixed;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+  z-index: 7;
+  left: 50%;
+  top: 45%;
+  margin-left: -4em;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 6px;
+  height: 24px;
+  background: rgb(0, 0, 0);
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: -20px;
+  left: 46px;
+}
+.loading {
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.418);
+  z-index: 5;
+  overflow-y: auto;
+}
+
+@keyframes animloader {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  25% {
+    transform: translate(-10px, 10px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  75% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+.showModal {
+  display: block !important;
+}
+#switchModal {
+  margin-left: 80%;
+}
+.cardStyle {
+  background-color: rgba(201, 201, 201, 0.93);
+  text-transform: uppercase;
+}
+#modalContent {
+  text-transform: uppercase;
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.modalContentName {
+  font-size: 20px;
+}
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform opacity;
+  transition-property: -webkit-transform opacity;
+  transition-property: transform opacity;
+  transition-property: transform opacity, -webkit-transform opacity;
+}
+
+.float-shadow:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+
+.float-shadow:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+/*# sourceMappingURL=style.css.map */
+#my-picture {
+  width: 20%;
+  height: 35%;
+  border-radius: 10%;
+  opacity: 0.9;
+}
+#about {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+#navbar li a {
+  color: #000;
+  font-size: large;
+  font-weight: 600;
+}
+#collapseBody {
+  background-color: rgba(201, 201, 201, 0.93);
+  border: none;
+}
